@@ -34,13 +34,12 @@
 ## 我的专业是夜叉除魔  
 ###我最喜欢的一段代码  
 ```python  
-# 定义函数
+
    def demon_slayer(karma):
        while karma > 0:
            print("靖妖傩舞！")
            karma -= 1
 
-   # 调用函数（必须！）
    demon_slayer(1000)  # 传入初始业障值
  
 ### 我最喜欢的环境管理工具是conda
