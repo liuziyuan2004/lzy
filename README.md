@@ -31,19 +31,17 @@
 
 ---
 
-## 我的专业是夜叉除魔  
-###我最喜欢的一段代码  
-```python  
+## 我的专业是人工智能
+### 我最喜欢的一段代码
 
-   def demon_slayer(karma):
-       while karma > 0:
-           print("靖妖傩舞！")
-           karma -= 1
+```python
+import numpy as np
+print(np.array([1, 2, 3]) ** 2)
+```
+其中执行`print(np.array([1, 2, 3]) ** 2)`可输出结果。
 
-   demon_slayer(1000)  # 传入初始业障值
- 
 ### 我最喜欢的环境管理工具是conda
-![截图一](截图一.png)
+<img src="https://raw.githubusercontent.com/Winnie-Qi/dev_skills/main/images/pic1.jpg" width="800" alt="截图一">
 
 ### 我可以在IDE上使用我建立的虚拟环境
-![截图二](截图二.png)
+<img src="https://raw.githubusercontent.com/Winnie-Qi/dev_skills/main/images/pic2.jpg" width="800" alt="截图二">
