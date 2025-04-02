@@ -7,45 +7,23 @@
 **条件独立性假设**：
 - 假设所有特征（词项）在给定类别条件下相互独立
 - 数学表达：
-  ![TF-IDF运行结果](path/to/tfidf_feat.png)
-  $$
-  P(\mathbf{x}|y) = \prod_{i=1}^n P(x_i|y)
-  $$
+  ![公式](1.jpg)
+ 
   
 
 **多项式分布假设**：
 - 特征服从多项式分布，建模词项出现次数：
-![TF-IDF运行结果](path/to/tfidf_feat.png)
-  $$
-  P(\mathbf{x}|y) = \frac{(\sum_i x_i)!}{\prod_i x_i!}\prod_i P(w_i|y)^{x_i}
-  $$
+![公式](2.jpg)
+  
 
 ### 1.2 贝叶斯分类决策
 
 **分类决策函数**：
-$$
-\hat{y} = \arg\max_{y} P(y)\prod_{i=1}^n P(x_i|y)
-$$
-![TF-IDF运行结果](path/to/tfidf_feat.png)
+![公式](3.jpg)
 **具体实现步骤**：
 
-1. 先验概率计算：
-   $$
-   P(y) = \frac{N_y + \alpha}{N + \alpha K}
-   $$
-   其中$N_y$是类别$y$的样本数，$K$是类别数，$\alpha$为平滑系数
-![TF-IDF运行结果](path/to/tfidf_feat.png)
-2. 条件概率计算（使用拉普拉斯平滑）：
-   $$
-   P(w_i|y) = \frac{count(w_i,y) + \alpha}{\sum_w count(w,y) + \alpha|V|}
-   $$
-   $|V|$为词汇表大小
 
-3. 对数空间计算（避免下溢）：
-   $$
-   \log P(y|\mathbf{x}) \propto \log P(y) + \sum_{i=1}^n x_i \log P(w_i|y)
-   $$
-![TF-IDF运行结果](path/to/tfidf_feat.png)
+![具体实现步骤](4.jpg)
 ### 1.3 算法优势分析
 
 | 优势 | 说明 |
@@ -60,10 +38,7 @@ $$
 ### 2.1 高频词特征选择
 
 **数学表达**：
-$$
-\text{Features} = \underset{t\in V}{\text{topk}} \left( \sum_{d\in D} \mathbb{I}(t\in d) \right)
-$$
-![TF-IDF运行结果](path/to/tfidf_feat.png)
+![公式](5.jpg)
 **实现代码**：
 ```python
 vectorizer = CountVectorizer(
@@ -81,10 +56,7 @@ vectorizer = CountVectorizer(
 ### 2.2 TF-IDF特征加权
 
 **数学定义**：
-$$
-\text{tfidf}(t,d,D) = \underbrace{\frac{f_{t,d}}{\sum_{t'}f_{t',d}}}_{\text{tf}} \times \underbrace{\log\frac{|D|}{|\{d'\in D:t\in d'\}|}}_{\text{idf}}
-$$
-![TF-IDF运行结果](path/to/tfidf_feat.png)
+![公式](6.jpg)
 **实现代码**：
 ```python
 vectorizer = TfidfVectorizer(
@@ -108,9 +80,9 @@ vectorizer = TfidfVectorizer(
 ## 三、系统运行结果
 
 ### 3.1 高频词特征分类效果
-![高频词特征运行结果](path/to/freq_feat.png)
+![高频词特征运行结果](高频词特征.png)
 
 ### 3.2 TF-IDF特征分类效果  
-![TF-IDF运行结果](path/to/tfidf_feat.png)
+![TF-IDF运行结果](TF-IDF.png)
 
 
