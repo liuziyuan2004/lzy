@@ -111,31 +111,4 @@ vectorizer = TfidfVectorizer(
 ### 3.2 TF-IDF特征分类效果  
 ![TF-IDF运行结果](path/to/tfidf_feat.png)
 
-### 3.3 性能指标对比
 
-| 指标 | 高频词 | TF-IDF |
-|------|--------|--------|
-| 准确率 | 89.2% | 92.7% |
-| F1-score | 0.876 | 0.913 |
-| 训练时间 | 1.2s | 1.8s |
-| 预测时间 | 0.3s | 0.4s |
-
-## 四、工程实践建议
-
-1. **特征选择优化**：
-   - 结合卡方检验选择最具区分度的特征
-   - 尝试n-gram特征（参数`ngram_range=(1,2)`）
-
-2. **模型改进方向**：
-   ```python
-   from sklearn.naive_bayes import ComplementNB
-   # 对不平衡数据表现更好
-   model = ComplementNB()
-   ```
-
-3. **生产环境部署**：
-   - 使用`joblib`持久化模型和向量化器
-   - 实现增量学习支持：
-   ```python
-   model.partial_fit(X_batch, y_batch)
-   ```
