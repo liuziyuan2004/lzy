@@ -323,3 +323,9 @@ vectorizer = CountVectorizer(
     tokenizer=jieba.cut,
     stop_words=stopwords
 )
+
+### 高频词特征运行结果截图
+![高频词特征运行结果](./高频词特征.png)
+
+### TF-IDF运行结果截图
+![TF-IDF运行结果](./TF-IDF.png)
