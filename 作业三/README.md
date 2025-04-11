@@ -267,7 +267,7 @@
 ​**​多项式分布假设​**​：
 - 特征服从多项式分布，建模词项出现次数：
   
-  $$P(\mathbf{x}|y) = \frac{(\sum\_{i} x\_i)!}{\prod\_{i} x\_i!}\prod\_{i} P(w\_i|y)^{x\_i}$$
+  $$P(\mathbf{x}|y) = \frac{(\sum\_{i} x\_i)!}{\prod\_{i} x\_i!}\prod\_{i} P(w\_i|y)^{x\_i}}$$
 
 ---
 
