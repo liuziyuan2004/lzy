@@ -262,12 +262,12 @@
   
   $$P(\mathbf{x}|y) = \prod\_{i=1}^n P(x\_i|y)$$
   
-  其中$\mathbf{x} = (x\_1,...,x\_n)$为特征向量，$y$为类别标签
+ 其中特征向量 $\mathbf{x} = (x\_1,\ ...,\ x\_n)$，$y$ 为类别标签
 
 ​**​多项式分布假设​**​：
 - 特征服从多项式分布，建模词项出现次数：
   
-  $$P(\mathbf{x}|y) = \frac{(\sum\_{i} x\_i)!}{\prod\_{i} x\_i!}\prod\_{i} P(w\_i|y)^{x\_i}}$$
+ $$ P(\mathbf{x}|y) = \frac{ \left( \sum\limits\_{i} x\_i \right)! }{ \prod\limits\_{i} x\_i! } \prod\limits\_{i} \left( P(w\_i|y)^{x\_i} \right) $$
 
 ---
 
@@ -312,7 +312,9 @@ $$\hat{y} = \arg\max\_{y} P(y)\prod\_{i=1}^n P(x\_i|y)$$
 ### 2.1 高频词特征选择
 
 ​**​数学表达​**​：
-$$\text{Features} = \underset{t\in V}{\text{topk}} \left( \sum\_{d\in D} \mathbb{I}(t\in d) \right)$$
+$$
+\text{Features} = \text{topk}_{t \in V} \Bigg( \sum_{d \in D} \mathbf{1}_{t \in d} \Bigg)
+$$
 
 ​**​实现代码​**​：
 ```python
