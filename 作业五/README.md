@@ -1,4 +1,4 @@
-### 09 RNN
+### 09 
 Surname-Classification-with-RNNs.py运行截图:
 ![Surname-Classification-with-RNNs.py运行截图](1.png)
 
@@ -18,12 +18,12 @@ RNN序列处理验证运行截图:
 ![推理能力验证运行截图](6.png)
 
 
-### 10 RNN
+### 10 
 
 Model1_Conditioned_Surname_Generation运行截图:
 ![Model1_Conditioned_Surname_Generation运行截图](7.png)
 
-有条件姓氏生成（学号尾数为3）:
+有条件姓氏生成（学号尾数为8）:
 ![有条件姓氏生成](8.png)
 
 

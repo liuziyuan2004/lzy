@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4e458bf-3e17-4c4c-9be3-d18c5790b136" name="更改" comment="f">
-      <change afterPath="$PROJECT_DIR$/作业五/Model1_Unconditioned_Surname_Generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/作业五/Model2_Conditioned_Surname_Generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/作业五/Surname-Classification-with-RNNs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/作业五/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/作业五/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
